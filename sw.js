@@ -1,7 +1,5 @@
 self.addEventListener('fetch', function(event) {
-  console.log('url clicked: ', event.request.url);
-  console.log('clients.matchAll() started');
-  clients.matchAll().then((clients) => { console.log('Got clients[0].type: ' + clients[0].type); });
+  console.log('onfetch: ', event.request.url);
   if (/\.jpg$/.test(event.request.url)) {
     console.log('fetch jpg: ' + event.request.url);
     event.respondWith(
