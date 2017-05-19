@@ -10,18 +10,17 @@
   </style>
 </head>
 <body>
+  Sub page
   <img src="a.jpg">
+  <img src="c.jpg">
   <div>
     <a href="https://jakearchibald.com/">https://jakearchibald.com/</a>
   </div>
   <div>
-    <a href="subpage.html">subpage.html</a>
+    <a href="../subpage.html">../subpage.html</a>
   </div>
    <div>
-    <a href="b.jpg">b.jpg</a>
-  </div>
-  <div>
-    <a href="subfolder/index.html">subpage.html</a>
+    <a href="../b.jpg">../b.jpg</a>
   </div>
   <script>
     function log() {
@@ -32,7 +31,7 @@
     window.onerror = function(err) {
       log("Error", err);
     };
-
+/*
     navigator.serviceWorker.register('sw.js', {
       scope: './'
     }).then(function(sw) {
@@ -41,5 +40,6 @@
     }).catch(function(err) {
       log("Error", err);
     });
+    */
   </script></body>
 </html>
