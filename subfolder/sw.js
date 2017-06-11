@@ -1,5 +1,6 @@
 self.addEventListener('fetch', function(event) {
   console.log('subpage onfetch: ', event.request.url);
+  console.log('event.clientId: ', event.clientId);
   if (/\.jpg$/.test(event.request.url)) {
     console.log('subpage fetch jpg: ' + event.request.url);
     event.respondWith(
