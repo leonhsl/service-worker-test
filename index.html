@@ -40,7 +40,13 @@
       log("Registered!", sw);
       log("You should get a different response when you refresh");
     }).catch(function(err) {
-      log("Error", err);
+      log("Register Error", err);
+    });
+
+    navigator.serviceWorker.getRegistration('./').then(function(sw) {
+      log("GetRegistration done!", sw);
+    }).catch(function(err) {
+      log("GetRegistration Error", err);
     });
   </script></body>
 </html>
